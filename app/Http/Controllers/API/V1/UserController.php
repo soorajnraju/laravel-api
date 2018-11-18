@@ -51,6 +51,8 @@ class UserController extends Controller
         $user = User::create($input); 
         $success['token'] =  $user->createToken('MyApp')-> accessToken; 
         $success['name'] =  $user->name;
+        $config = config('session');
+        setcookie('bearer_token', $success['token'], time()+3600, $config['path'], $config['domain'], false, true);
         return response()->json(['success'=>$success], $this-> successStatus); 
     }
     /** 
