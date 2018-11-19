@@ -21,7 +21,7 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\TrustProxies::class,
         \App\Http\Middleware\Cors::class,
         \Illuminate\Session\Middleware\StartSession::class,
-        \App\Http\Middleware\Csrf::class,
+        //\App\Http\Middleware\Csrf::class,
     ];
 
     /**

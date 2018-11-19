@@ -14,6 +14,7 @@ class Order extends Model
      * @var array
      */
     protected $fillable = [
-        'amount','card_ids'
+        'amount','cart_ids'
     ];
+
 }
