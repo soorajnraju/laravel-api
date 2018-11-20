@@ -1,3 +1,15 @@
+# block files which needs to be hidden // in here specify .example extension of the file
+<Files ~ "\.(env|json|config.js|md|gitignore|gitattributes|lock|xml|editorconfig|example|key|log)$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# in here specify full file name sperator '|'
+<Files ~ "(artisan|composer.json|composer.lock|package.json|phpunit.xml|webpack.mix.js|yarn-error.log)$">
+    Order allow,deny
+    Deny from all
+</Files>
+ 
 Options +FollowSymLinks -Indexes
 RewriteEngine On
 
